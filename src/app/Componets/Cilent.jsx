@@ -1,4 +1,4 @@
-// components/Clients.jsx
+
 import Image from 'next/image'
 
 const clients = [
@@ -15,18 +15,10 @@ export default function Clients() {
         <section className="bg-[#178c8d] py-10 rounded-xl mx-4 md:mx-10 my-8">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
-                    {clients.map((client, index) => (
-                        <div
-                            key={index}
-                            className="flex items-center justify-center border border-white/20 rounded-lg p-4 bg-[#178c8d] hover:bg-[#127272] transition"
-                        >
-                            <Image
-                                src={client.src}
-                                alt={client.alt}
-                                width={100}
-                                height={100}
-                                className="object-contain  transition "
-                            />
+                    {
+                    clients.map((client, index) => (
+                        <div key={index} className="flex items-center justify-center border border-white/20 rounded-lg p-4 bg-[#178c8d] hover:bg-[#127272] transition">
+                            <Image src={client.src} alt={client.alt} width={100} height={100} className="object-contain  transition "/>
                         </div>
                     ))}
                 </div>

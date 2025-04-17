@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="bg-[#0b1d20] text-white pt-16 pb-6 relative">
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-                {/* Logo & Social */}
+               
                 <div>
                     <div className="flex items-center gap-2 mb-4">
                         <div className="bg-teal-500 w-5 h-5 rounded-sm" />
@@ -32,7 +32,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Services */}
+               
                 <div>
                     <h3 className="font-semibold mb-3">Services</h3>
                     <ul className="space-y-2 text-sm text-gray-400">
@@ -45,7 +45,7 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                {/* Resources */}
+               
                 <div>
                     <h3 className="font-semibold mb-3">Resources</h3>
                     <ul className="space-y-2 text-sm text-gray-400">
@@ -61,7 +61,7 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                {/* Contact Info */}
+              
                 <div>
                     <h3 className="font-semibold mb-3">Our Office</h3>
                     <p className="text-sm text-gray-400">
@@ -77,7 +77,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Newsletter */}
+            
             <div className="max-w-4xl mx-auto px-4 sm:px-6 mt-12">
                 <div className="bg-gray-800 p-6 rounded-xl grid gap-4 sm:grid-cols-2 items-center">
                     <h4 className="text-xl font-semibold leading-snug">
@@ -104,7 +104,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Awards */}
+           
             <div className="text-center mt-10 text-sm text-gray-400">
                 <div className="flex flex-col sm:flex-row justify-center gap-8 mb-4 text-white">
                     <div>
@@ -119,13 +119,9 @@ export default function Footer() {
                
             </div>
 
-            {/* Scroll to Top */}
-            <a
-                href="#"
-                className="fixed bottom-6 right-6 bg-teal-600 text-white p-3 rounded-full shadow-lg hover:bg-teal-500 transition"
-                aria-label="Scroll to top"
-            >
-                <FaArrowUp />
+            
+            <a href="#" className="fixed bottom-6 right-6 bg-teal-600 text-white p-3 rounded-full shadow-lg hover:bg-teal-500 transition" aria-label="Scroll to top">
+            <FaArrowUp />
             </a>
             </div>
             <div className="text-center">

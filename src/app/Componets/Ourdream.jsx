@@ -49,20 +49,14 @@ const ProudProjects = () => {
                 </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {projects.map((project) => (
-                        <div
-                            key={project.id}
-                            onClick={() => handleClick(project.id)}
-                            className={`rounded-xl overflow-hidden cursor-pointer transition-all shadow-lg ${activeCard === project.id ? 'ring-2 ring-teal-400' : ''
-                                }`}
-                        >
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                width={100}
-                                height={100}
-                                className="w-full h-[250px] sm:h-[220px] lg:h-[267px] "
-                            />
+                    {
+                    projects.map((project) => (
+                        <div key={project.id} onClick={() => handleClick(project.id)} className={`rounded-xl overflow-hidden cursor-pointer transition-all shadow-lg ${activeCard === project.id ? 'ring-2 ring-teal-400' : ''  }`}>
+                            
+                            <div className='bg-[#008080a6]'>
+                                <Image src={project.image} alt={project.title} width={100} height={100} className="w-full h-[250px] sm:h-[220px] lg:h-[267px] opacity-65" />
+                            </div>
+                            
                             <div className="bg-[#0f2b2a] p-5 h-36 flex flex-col justify-between">
                                 <span className="text-xs bg-gray-800 px-3 py-1 rounded-full text-gray-300 w-max">
                                     {project.tag}

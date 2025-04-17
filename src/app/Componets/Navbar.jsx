@@ -46,15 +46,16 @@ export default function Navbar() {
     return (
         <nav className="bg-[#d9e7e7] shadow-md rounded-t-2xl z-50 relative">
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-                {/* Logo */}
+               
                 <div className="flex items-center gap-2">
                     <img src="/logo.png" alt="Logo" className="h-8 w-8" />
                     <span className="text-xl font-bold text-gray-800">Bexon</span>
                 </div>
 
-                {/* Desktop Menu */}
+               
                 <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700 relative">
-                    {menuItems.map((item, idx) => (
+                    {
+                    menuItems.map((item, idx) => (
                         <li
                             key={idx}
                             className="relative group"
@@ -72,12 +73,9 @@ export default function Navbar() {
                                 </Link>
                             )}
 
-                            {/* Dropdown */}
+                          
                             {item.submenu && hoveredMenu === idx && (
-                                <ul
-                                    className="absolute top-full left-0 bg-white shadow-lg mt-2 rounded-lg py-2 w-48 z-10
-                  transition-all duration-300 ease-out transform opacity-100 scale-100"
-                                >
+                                <ul className="absolute top-full left-0 bg-white shadow-lg mt-2 rounded-lg py-2 w-48 z-10 transition-all duration-300 ease-out transform opacity-100 scale-100" >
                                     {item.submenu.map((subItem, subIdx) => (
                                         <li key={subIdx}>
                                             <Link
@@ -94,7 +92,7 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                {/* Icons */}
+               
                 <div className="flex items-center gap-4">
                     <Search className="w-5 h-5 text-gray-700 cursor-pointer" />
 
@@ -105,7 +103,7 @@ export default function Navbar() {
                         </span>
                     </button>
 
-                    {/* Mobile toggle */}
+                    
                     <div className="md:hidden">
                         {mobileMenuOpen ? (
                             <X
@@ -122,7 +120,7 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile Menu */}
+          
             {mobileMenuOpen && (
                 <div className="md:hidden px-4 pb-4 bg-[#dceced]">
                     <ul className="flex flex-col gap-3 text-gray-800 font-medium">

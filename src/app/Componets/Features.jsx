@@ -38,24 +38,14 @@ export default function FeaturesSection() {
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-6">
-        {features.map((feature, index) => (
+        {
+        features.map((feature, index) => (
           <div
-            key={index}
-            className={`p-6 rounded-xl shadow-md transition ${
-              feature.highlighted
-                ? "bg-teal-700 text-white"
-                : "bg-white text-gray-900"
-            }`}
-          >
+            key={index} className={`p-6 rounded-xl shadow-md transition ${ feature.highlighted ? "bg-teal-700 text-white"  : "bg-white text-gray-900" }`}>
             <div className="mb-4">{feature.icon}</div>
             <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
             <p className="text-sm mb-4">{feature.description}</p>
-            <a
-              href="#"
-              className={`font-semibold flex items-center space-x-2 ${
-                feature.highlighted ? "text-white" : "text-teal-700"
-              }`}
-            >
+            <a href="#" className={`font-semibold flex items-center space-x-2 ${ feature.highlighted ? "text-white" : "text-teal-700"}`}>
               <span>Read More</span>
               <span className="text-lg"><FaMousePointer/></span>
             </a>

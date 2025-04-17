@@ -38,16 +38,10 @@ export default function FAQSection() {
   return (
     <section className="py-20 bg-[#edf2f2]">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-        {/* Left Side */}
+        
         <div className="relative rounded-xl overflow-hidden">
           <div className='top-0 bottom-0 right-0 left-0 bg-teal-600'>
-            <Image
-              src="/bussiness process bg.jpg"
-              alt="Need Help"
-              width={600}
-              height={500}
-              className="w-full h-full object-cover opacity-50"
-            />
+            <Image src="/bussiness process bg.jpg" alt="Need Help" width={600} height={500} className="w-full h-full object-cover opacity-60" />
           </div>
        
           <div className="absolute top-10 left-10 text-white text-3xl font-semibold max-w-sm leading-snug">
@@ -68,28 +62,27 @@ export default function FAQSection() {
           </div>
         </div>
 
-        {/* Right Side - FAQs */}
+       
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className={`rounded-lg px-6 py-5 shadow transition-colors ${openIndex === index ? 'bg-teal-600 text-white' : 'bg-white'
-                }`}
-            >
+          {
+          faqs.map((faq, index) => (
+            <div key={index} className={`rounded-lg px-6 py-5 shadow transition-colors ${openIndex === index ? 'bg-teal-600 text-white' : 'bg-white' }`}>
               <div
-                className="flex justify-between items-center cursor-pointer"
-                onClick={() => toggleFAQ(index)}
-              >
+                className="flex justify-between items-center cursor-pointer" onClick={() => toggleFAQ(index)} >
                 <h4 className="font-semibold text-md">{faq.question}</h4>
-                {openIndex === index ? (
+                {
+                openIndex === index ? (
                   <Minus className="w-5 h-5" />
                 ) : (
                   <Plus className="w-5 h-5" />
                 )}
               </div>
-              {openIndex === index && faq.answer && (
+              {
+              openIndex === index && faq.answer && (
                 <div className="mt-3 text-sm border-t pt-3 opacity-90 leading-relaxed">
-                  {faq.answer}
+                  {
+                  faq.answer
+                  }
                 </div>
               )}
             </div>

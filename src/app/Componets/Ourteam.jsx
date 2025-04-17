@@ -67,26 +67,22 @@ export default function MeetOurTeam() {
                     <h2 className="text-4xl font-bold mb-3">People Behind Bexon.</h2>
 
                     <div className="rounded-xl overflow-hidden bg-[#bccccc] max-w-md mx-auto lg:mx-0 duration-500">
-                        {activeMember?.image && (
-                            <Image
-                                src={activeMember.image}
-                                alt={activeMember.name}
-                                width={600}
-                                height={700}
-                                className="object-cover w-full h-[500px] duration-300"
-                            />
+                        {
+                        activeMember?.image && (
+
+
+                            <div className='bg-[#00808095]'>
+                                <Image src={activeMember.image} alt={activeMember.name} width={600} height={700} className="object-cover w-full h-[500px] duration-300 opacity-70"/> 
+                            </div>
+                           
                         )}
                     </div>
                 </div>
 
                 <div className="flex-1 space-y-4 w-full">
-                    {team.map((member) => (
-                        <div
-                            key={member.id}
-                            onClick={() => setActiveId(member.id)}
-                            className={`p-6 bg-white rounded-xl shadow-sm cursor-pointer transition-all flex justify-between items-center ${member.id === activeId ? 'border-2 border-teal-500' : 'hover:bg-gray-100'
-                                }`}
-                        >
+                    {
+                    team.map((member) => (
+                        <div key={member.id} onClick={() => setActiveId(member.id)} className={`p-6 bg-white rounded-xl shadow-sm cursor-pointer transition-all flex justify-between items-center ${member.id === activeId ? 'border-2 border-teal-500' : 'hover:bg-gray-100'  }`} >
                             <div>
                                 <h3 className="text-lg font-semibold">{member.name}</h3>
                                 <p className="text-sm text-gray-500">{member.title}</p>
@@ -101,7 +97,8 @@ export default function MeetOurTeam() {
                                 )}
                             </div>
 
-                            {member.id === activeId && (
+                            {
+                            member.id === activeId && (
                                 <ArrowUpRight className="text-teal-600 w-5 h-5" />
                             )}
                         </div>

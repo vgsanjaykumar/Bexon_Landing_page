@@ -1,12 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import {
-    Briefcase,
-    Headphones,
-    Leaf,
-    Presentation,
-} from 'lucide-react';
+import { Briefcase,Headphones,Leaf,Presentation,} from 'lucide-react';
 import { FaMousePointer } from 'react-icons/fa';
 
 const initialServices = [
@@ -41,7 +36,7 @@ const initialServices = [
 ];
 
 const SolutionsSection = () => {
-    const [activeIndex, setActiveIndex] = useState(1); // default selected card (index 1)
+    const [activeIndex, setActiveIndex] = useState(1); 
 
     return (
         <section className="bg-[#e6f0ef] py-20">
@@ -49,14 +44,15 @@ const SolutionsSection = () => {
                 <p className="text-teal-600 font-medium uppercase mb-2 tracking-wide">
                     Our Solutions
                 </p>
-                <h2 className="text-3xl sm:text-4xl font-bold mb-12">
+                <h2 className="text-3xl sm:text-4xl font-semibold mb-12">
                     Tailor Business Solutions for Corporates.
                 </h2>
 
                 <div className="relative grid md:grid-cols-3 gap-6 items-center">
-                    {/* Left Column */}
+                   
                     <div className="flex flex-col gap-6">
-                        {initialServices.slice(0, 2).map((service, idx) => {
+                        {
+                        initialServices.slice(0, 2).map((service, idx) => {
                             const actualIndex = idx;
                             const Icon = service.icon;
                             const isActive = activeIndex === actualIndex;
@@ -78,7 +74,7 @@ const SolutionsSection = () => {
                         })}
                     </div>
 
-                    {/* Center Image */}
+                   
                     <div className="hidden md:flex justify-center items-center">
                         <img
                             src={initialServices[activeIndex].image}
@@ -87,7 +83,7 @@ const SolutionsSection = () => {
                         />
                     </div>
 
-                    {/* Right Column */}
+                   
                     <div className="flex flex-col gap-6">
                         {initialServices.slice(2).map((service, idx) => {
                             const actualIndex = idx + 2;
@@ -112,7 +108,7 @@ const SolutionsSection = () => {
                     </div>
                 </div>
 
-                {/* Button */}
+               
                 <div className="mt-10">
                     <button className="bg-teal-600 text-white px-6 py-3 rounded-full font-medium hover:bg-teal-500 transition">
                         More Services
